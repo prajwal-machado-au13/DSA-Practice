@@ -1,11 +1,11 @@
 def insertionSort(li):
     for idx in range(1,len(li)):
-        pos=idx
-        curr=li[idx]
-        while pos>0 and li[pos-1]>curr:
-            li[pos]=li[pos-1]
+        pos = idx - 1
+        key = li[idx]
+        while pos>=0 and key < li[pos]:
+            li[pos+1]=li[pos]
             pos=pos-1
-        li[pos]=curr
+        li[pos+1] = key
     return li
 
 
